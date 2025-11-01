@@ -1,0 +1,10 @@
+name: Variables
+on: push
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    env:
+      USERNAME: ${{ vars.USERNAME }}     # 변수(USERNAME) 참조
+    steps:
+      - run: echo "${USERNAME}"          # 환경변수를 참조하여 변수 값 출력
+
